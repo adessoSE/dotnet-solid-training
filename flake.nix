@@ -10,12 +10,12 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-      in 
+      in
       {
         devShell =
           pkgs.mkShell {
             buildInputs = with pkgs; [
-              dotnet-sdk
+              dotnet-sdk_9
               omnisharp-roslyn
             ];
             shellHook = ''
